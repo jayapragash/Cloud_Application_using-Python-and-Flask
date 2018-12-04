@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<head>
+
+    <title>Course</title>
+</head>
+<body>
+    <h2>Give the range for the magnitude </h2>
+    <form action="{{ url_for('getmag') }}" method="POST">
+        mag range start<input type="text" name="start">
+        mag end range<input type="text" name="end">
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

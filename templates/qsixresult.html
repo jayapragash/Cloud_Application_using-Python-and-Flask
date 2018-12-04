@@ -1,0 +1,35 @@
+<html>
+  <head>
+      <h1>Jayapragash Baskar</h1><br>
+            <h1>4014</h1>
+                <h2 style="color:blue;">I survived the Minnow</h2>
+            <img src="./static/Minnow.jpg">
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Latitude', 'Longitude'],
+          ['10-11',    {{var[0]}}],
+          ['11-12',  {{var[1]}}],
+          ['40-41',  {{var[2]}}],
+          ['41-42',  {{var[3]}}],
+        ]);
+
+        var options = {
+          title: 'Pie Chart'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="piechart" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>

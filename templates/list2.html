@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+
+   <body>
+
+   <center>
+      <header> <h1> Mag results </h1>
+      </header>
+      <br> <br>
+      <table border = 1>
+         <thead>
+            <td>Cabin num</td>
+            <td>Fname</td>
+            <td>Lname</td>
+            <td>Age</td>
+            <td>Survived</td>
+            <td>Lat</td>
+            <td>Long</td>
+            <td>Picture Cap</td>
+            <td>Picture Pass</td>
+            <td>Fare</td>
+         </thead>
+
+         {% for row in rows %}
+         <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row[1]}}</td>
+            <td>{{row[2]}}</td>
+            <td>{{row[3]}}</td>
+            <td>{{row[4]}}</td>
+            <td>{{row[5]}}</td>
+            <td>{{row[6]}}</td>
+            <td>{{row[7]}}</td>
+            <td>{{row[8]}}</td>
+            <td>{{row[9]}}</td>
+         </tr>
+         {% endfor %}
+      </table>
+
+      <br>
+      <h2> <a href = "/">Home</a> </h2>
+   </body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Mag Range', 'No of Earthquakes'],
+          ['0-2',    {{var[0]}}],
+          ['2-2.5',  {{var[1]}}],
+          ['2.5-3',  {{var[2]}}],
+          ['3-3.5',  {{var[3]}}],
+          ['3.5-4',  {{var[4]}}],
+          ['4-4.5',  {{var[5]}}],
+          ['4.5-5',  {{var[6]}}],
+          ['5-5.5',  {{var[7]}}],
+          ['5.5-6', {{var[8]}}],
+        ]);
+
+        var options = {
+          title: 'Bar Chart for displaying Number of Earthquakes'
+        };
+
+        var chart = new google.visualization.BarChart(document.getElementById('barchart'));
+
+        chart.draw(data, options);
+      }
+    </script>
+  </head>
+  <body>
+    <div id="barchart" style="width: 900px; height: 500px;"></div>
+  </body>
+</html>

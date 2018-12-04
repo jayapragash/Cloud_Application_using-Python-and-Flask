@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+   <body>
+            <center>
+            <h1>Jayapragash Baskar</h1><br>
+                <h2 style="color:blue;">A Web Application Project Using Flask and python and deploying it on the AWS!!</h2>
+            <img src="./static/Minnow.jpg">
+       <br>
+            <h2> Upload CSV File for titanic Data</h2>
+            <form action="{{url_for('ctb')}}" method="POST" enctype = "multipart/form-data">
+            <input type="file" name="myf"><br>
+            <br>
+            <input type="submit" name="Submit"><br>
+            </form>
+            <hr>
+<br>
+            <h2> Upload CSV File for earthquake data</h2>
+            <form action="{{url_for('ctb1')}}" method="POST" enctype = "multipart/form-data">
+            <input type="file" name="myfi"><br>
+            <br>
+            <input type="submit" name="Submit"><br>
+            </form>
+            <br>
+                <hr>
+                <br>
+            <h2> Upload CSV File for minnow data</h2>
+            <form action="{{url_for('ctb2')}}" method="POST" enctype = "multipart/form-data">
+            <input type="file" name="myfil"><br>
+            <br>
+            <input type="submit" name="Submit"><br>
+            </form>
+            <br>
+             <h2><a href = "/lis">Retrieve Titanic table contents</a></h2>
+                 <br>
+             <h2><a href = "/list1">Retrieve Earthquake table contents</a></h2>
+                <br>
+             <h2><a href = "/list2">Retrieve minnow table contents</a></h2>
+                <br>
+                <h2><a href="/qeight">Chart for number of people survived Based on the Fare in Titanic</a></h2>
+                 <br>
+                <h2><a href="/clusterform">Clustering Based on K-Means</a></h2>
+                <br>
+                <h2><a href="/earthq">Chart for Earthquakes based on their scale</a></h2>
+                <br>
+                <h2><a href="/titapie">Chart for Female Survivours in Titanic</a> </h2>
+                <br>
+                <h2><a href="/titabar">Chart for Male Survivours in Titanic</a> </h2>
+                </h2>
+                </center>
+   </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+ <center> <h2>Coordinates of Cluster Centers are given in the below Table:</h2>
+     <h2>The number of clusters are {{num}}</h2>
+ <h2>The number of points in each clusters are {{count}} </h2>
+     <h2>The distance is {{dist}}</h2>
+     <h2>The distance between clusters {{distance}}</h2>
+
+     <h2>The silhouette average is {{sli}}</h2>
+     <h2>the Maximum distance between the centroids is {{maxi}}</h2>
+     <table border = 1>
+         <thead>
+            <td>X-Axis</td>
+            <td>Y-Axis</td>
+         </thead>
+
+
+     {% for rows in rows %}
+            <tr>
+                     <td>{{rows[0]}}</td>
+                     <td>{{rows[1]}}</td>
+            </tr>
+     {% endfor %}
+      </table>
+     <!--<img src="{{url_for('static',filename='scatter1.png')}}">-->
+ </center>
+
+
+</body>
+</html>
+

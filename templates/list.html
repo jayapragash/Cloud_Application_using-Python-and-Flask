@@ -1,0 +1,51 @@
+<!doctype html>
+<html>
+
+   <body>
+
+   <center>
+      <header> <h1> Mag results </h1>
+      </header>
+      <br> <br>
+      <table border = 1>
+         <thead>
+            <td>pclass</td>
+            <td>Survived</td>
+            <td>Name</td>
+            <td>Sex</td>
+            <td>Age</td>
+            <td>Sibsp</td>
+            <td>Parch</td>
+            <td>Ticket</td>
+            <td>Fare</td>
+            <td>Cabin</td>
+            <td>Embarked</td>
+            <td>Boat</td>
+            <td>Body</td>
+            <td>Home Dest</td>
+         </thead>
+
+         {% for row in rows %}
+         <tr>
+            <td>{{row[0]}}</td>
+            <td>{{row["survived"]}}</td>
+            <td>{{row["name"]}}</td>
+            <td>{{row["sex"]}}</td>
+            <td>{{row["age"]}}</td>
+            <td>{{row["sibsp"]}}</td>
+            <td>{{row["parch"]}}</td>
+            <td>{{row["ticket"]}}</td>
+            <td>{{row["fare"]}}</td>
+            <td>{{row["cabin"]}}</td>
+            <td>{{row["embarked"]}}</td>
+            <td>{{row["boat"]}}</td>
+            <td>{{row["body"]}}</td>
+            <td>{{row["home.dest"]}}</td>
+         </tr>
+         {% endfor %}
+      </table>
+
+      <br>
+      <h2> <a href = "/">Home</a> </h2>
+   </body>
+</html>
