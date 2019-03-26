@@ -1,0 +1,9 @@
+version: 0.2
+phases:
+  build:
+    commands:
+      - echo build complete
+artifacts:
+  files:
+    - '**/*'
+  name: myname-$(AWS_REGION) 
